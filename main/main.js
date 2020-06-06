@@ -2,6 +2,7 @@
 
 const os = require('os');
 const electron = require('electron');
+const path = require('path');
 const electronLocalshortcut = require('electron-localshortcut');
 
 const pkgfile = require('../package');
@@ -94,6 +95,7 @@ app.on('ready', () => {
         minHeight: 400,
         fullscreenable: false,
         frame: !global.settings.useCustomAppTitle,
+        icon: path.join(__dirname, '..', 'assets', 'AriaNg.png'),
         show: false,
         webPreferences: {
             nodeIntegration: true
