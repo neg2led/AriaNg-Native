@@ -17,7 +17,8 @@
     "copy-main-dependencies": "node copy-main-modules.js -s node_modules -d dist -v",
     "copy-app-dependencies": "node copy-app-modules.js -d dist -v",
     "publish:win": "npm run clean && npm run copy-main-dependencies && npm run copy-app-dependencies && electron-builder --win",
-    "publish:osx": "npm run clean && npm run copy-main-dependencies && npm run copy-app-dependencies && electron-builder --mac"
+    "publish:osx": "npm run clean && npm run copy-main-dependencies && npm run copy-app-dependencies && electron-builder --mac",
+    "publish:linux": "npm run clean && npm run copy-main-dependencies && npm run copy-app-dependencies && electron-builder --linux"
   },
   "repository": {
     "type": "git",
@@ -169,6 +170,10 @@
     },
     "dmg": {
       "icon": "assets/AriaNg.icns"
+    },
+    "linux": {
+      "icon": "assets/AriaNg.png",
+      "target": "AppImage"
     }
   }
 }
